@@ -1,0 +1,22 @@
+[2026-01-12 03:12:53] UNCAUGHT: SQLSTATE[HY093]: Invalid parameter number in /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/Auth.php:180
+#0 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/Auth.php(180): PDOStatement->execute()
+#1 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/Auth.php(116): Auth::fetchWhmcsAdmin()
+#2 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Modules/Auth/AuthController.php(58): Auth::loginWithWhmcsStaff()
+#3 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/App.php(86): AuthController->doLogin()
+#4 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/Router.php(110): App->{closure:App::defineRoutes():85}()
+#5 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/App.php(288): Router->dispatch()
+#6 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/index.php(58): App->run()
+#7 /home/smart/domains/admin.smartsoftart.com/public_html/index.php(3): require('/home/smart/dom...')
+#8 {main}
+
+[2026-01-13 15:33:45] UNCAUGHT: SQLSTATE[HY093]: Invalid parameter number in /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/Auth.php:180
+#0 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/Auth.php(180): PDOStatement->execute()
+#1 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/Auth.php(116): Auth::fetchWhmcsAdmin()
+#2 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Modules/Auth/AuthController.php(58): Auth::loginWithWhmcsStaff()
+#3 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/App.php(86): AuthController->doLogin()
+#4 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/Router.php(110): App->{closure:App::defineRoutes():85}()
+#5 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/app/Core/App.php(288): Router->dispatch()
+#6 /home/smart/domains/admin.smartsoftart.com/public_html/ssa-admin/index.php(58): App->run()
+#7 /home/smart/domains/admin.smartsoftart.com/public_html/index.php(3): require('/home/smart/dom...')
+#8 {main}
+

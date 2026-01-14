@@ -1,0 +1,151 @@
+/* SSA Animations CSS */
+
+.ssa-glow {
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, .10),
+        0 0 18px rgba(124, 92, 255, .55),
+        0 0 34px rgba(0, 212, 255, .18);
+    animation: ssaGlowPulse 1.7s ease-in-out infinite;
+}
+
+@keyframes ssaGlowPulse {
+    0% {
+        transform: translateY(0) scale(1);
+        filter: brightness(1)
+    }
+
+    50% {
+        transform: translateY(-1px) scale(1.03);
+        filter: brightness(1.12)
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        filter: brightness(1)
+    }
+}
+
+/* Subtle fade-in */
+.ssa-fade-in {
+    animation: ssaFadeIn .22s ease-out both;
+}
+
+@keyframes ssaFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+/* Hover lift for panels/cards */
+.hover-lift {
+    transition: transform .16s ease, border-color .16s ease, background .16s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-2px);
+    border-color: rgba(124, 92, 255, .25);
+}
+
+/* Button shimmer */
+.btn-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shimmer::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 60%;
+    height: 180%;
+    transform: rotate(25deg);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .18), transparent);
+    animation: ssaShimmer 2.4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes ssaShimmer {
+    0% {
+        transform: translateX(-140%) rotate(25deg)
+    }
+
+    50% {
+        transform: translateX(140%) rotate(25deg)
+    }
+
+    100% {
+        transform: translateX(-140%) rotate(25deg)
+    }
+}
+
+/* Icon bell wiggle (optional on unread) */
+.ssa-bell-wiggle {
+    animation: ssaBell .9s ease-in-out infinite;
+}
+
+@keyframes ssaBell {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    15% {
+        transform: rotate(10deg)
+    }
+
+    30% {
+        transform: rotate(-10deg)
+    }
+
+    45% {
+        transform: rotate(8deg)
+    }
+
+    60% {
+        transform: rotate(-8deg)
+    }
+
+    75% {
+        transform: rotate(5deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}/* SSA Responsive tweaks */
+
+/* Small phones */
+@media (max-width: 420px){
+  .ssa-content{padding: 14px}
+  .ssa-topbar{padding: 0 10px}
+  .ssa-topbar-title{font-size: 14px}
+  .btn{width: 100%}
+  .page-actions{width:100%}
+}
+
+/* General mobile/tablet */
+@media (max-width: 980px){
+  .ssa-content{max-width: 980px}
+  .page-head{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .page-actions{
+    justify-content: flex-start;
+  }
+  .table-wrap{
+    border: 1px solid rgba(255,255,255,.08);
+    background: rgba(255,255,255,.02);
+  }
+}
+
+/* Wide */
+@media (min-width: 1400px){
+  .ssa-content{max-width: 1500px}
+}
